@@ -11,6 +11,7 @@ stages {
     steps {
       script{
         git 'https://github.com/akhireddy9008/terraform-jenkins.git'
+        echo "success"
         }
       }
     }
