@@ -19,7 +19,7 @@ stages {
     steps{
       script {
        sh """
-            az login --service-principal -u Azure_client_id -p Azure_client_secret -t Azure_tenant_id
+            az login --service-principal --username Azure_client_id --password Azure_client_secret --tenant Azure_tenant_id
             az account set -s Azure_subscription_id
             echo 'success'
             """
