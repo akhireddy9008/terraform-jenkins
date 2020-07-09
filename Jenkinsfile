@@ -15,7 +15,7 @@ stages {
         }
       }
     }
- stage('test') {
+ stage('azure login') {
     steps{
       script {
         withCredentials([azureServicePrincipal('azure-service-principal')]) {
@@ -34,8 +34,6 @@ stages {
           sh """
                 terraform init
                 terraform validate
-                terraform plan
-                terraform apply --auto-approve
                 """
         }
       }
