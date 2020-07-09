@@ -18,7 +18,7 @@ stages {
  stage('test') {
     steps{
       script {
-        batsh """
+        sh """
                mkdir -p akhil akhil1 akhil2
                ls
                echo "here are files i have created for you"
