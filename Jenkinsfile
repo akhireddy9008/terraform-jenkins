@@ -1,10 +1,4 @@
-pipeline {
-  environment {
-    Azure_tenant_id='TENANT-ID'
-    Azure_subscription_id='SUBSCRIPTION_ID'
-    Azure_client_id='CLIENT_ID'
-    Azure_client_secret='CLIENT_SECRET'
-  }  
+pipeline { 
 agent any
 stages {
   stage('Cloning our Git') {
