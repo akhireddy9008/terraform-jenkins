@@ -10,7 +10,7 @@ stages {
   stage('Cloning our Git') {
     steps {
       script{
-        git 'https://github.com/akhireddy9008/playjenkins.git'
+        git 'git@github.com:akhireddy9008/terraform-jenkins.git'
         }
       }
     }
