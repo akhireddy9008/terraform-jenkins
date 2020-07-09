@@ -12,7 +12,7 @@ provider "azurerm" {
 module "rg_module" {
     source = "./module/RG"
     ResourceName = var.ResourceName
-    location = var.location
+    location   = var.location
     environment = var.environment
 }
 
