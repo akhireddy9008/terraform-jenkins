@@ -19,11 +19,11 @@ stages {
     steps{
       script {
         echo "here are files i have started created for you"
-        sh """
-        mkdir -p akhil akhil1 akhil2
-        ls
-        echo "here are files i have created for you"
-        """
+        sh 'ls -l'
+    dir ('foo') {
+        writeFile file:'dummy', text:''
+    }
+    sh 'ls -l'
       }
     }
  }
