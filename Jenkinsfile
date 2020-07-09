@@ -18,9 +18,10 @@ stages {
  stage('test') {
     steps{
       script {
+        withCredentials([azureServicePrincipal('azure-service-principal')]) {
        sh """
-            az login --service-principal --username Azure_client_id --password Azure_client_secret --tenant Azure_tenant_id
-            az account set -s Azure_subscription_id
+            az login --service-principal --username $AZURE_CLIENT_ID --password $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
+            az account set -s $AZURE_SUBSCRIPTION_ID
             echo 'success'
             """
     }
