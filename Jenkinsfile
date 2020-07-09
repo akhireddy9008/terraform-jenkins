@@ -60,8 +60,8 @@ stages {
     steps {
       script{
           sh """
-               
-                terraform destroy --auto-approve
+                terraform destroy --auto-approve 
+              
                 """
         }
       }
