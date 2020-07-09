@@ -19,12 +19,12 @@ stages {
     steps{
       script {
        
-            sh """
+         
             echo "stage started"
             az login --service-principal -u Azure_client_id -p Azure_client_secret -t Azure_tenant_id
             az account set -s Azure_subscription_id
             echo "stage ended"
-            """
+        
         
       }
      }
