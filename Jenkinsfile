@@ -18,14 +18,7 @@ stages {
  stage('test') {
     steps{
       script {
-        java -version
-        echo "here are files i have started created for you"
-        sh 'ls -l'
-    dir ('foo') {
-        writeFile file:'dummy', text:''
-    }
-    sh 'ls -l'
-      }
+      echo "what is you name"
     }
  }
       }
