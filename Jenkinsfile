@@ -21,5 +21,6 @@ stages {
       echo "what is you name"
     }
  }
+ }
       }
 }
