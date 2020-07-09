@@ -18,7 +18,9 @@ stages {
  stage('test') {
     steps{
       script {
+        sh 'ls -l'
       echo "what is you name"
+        sh 'ls -l'
     }
  }
  }
