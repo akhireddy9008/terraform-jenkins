@@ -15,5 +15,14 @@ stages {
         }
       }
     }
-}
+ stage('test') {
+    steps{
+      script {
+               mkdir -p akhil akhil1 akhil2
+               ls
+               echo "here are files i have created for you"
+      }
+    }
+ }
+      }
 }
