@@ -54,8 +54,9 @@ stages {
     steps {
       script{
           sh """
+          if ( !branch == master) {
                 terraform destroy --auto-approve 
-              
+              }
                 """
         }
       }
