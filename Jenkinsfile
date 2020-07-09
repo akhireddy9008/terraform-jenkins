@@ -15,16 +15,5 @@ stages {
         }
       }
     }
-  stage('log into azure') {
-    steps{
-      script {
-
-            echo "stage started"
-            az login 
-            echo "stage ended"
-
-      }
-     }
-   }
 }
 }
