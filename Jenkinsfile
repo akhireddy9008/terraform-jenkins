@@ -28,5 +28,15 @@ stages {
  }
  }
  }
+   stage('terraform initialization') {
+    steps {
+      script{
+          sh """
+                terraform init
+                terraform validate
+                """
+        }
+      }
+    }
       }
 }
