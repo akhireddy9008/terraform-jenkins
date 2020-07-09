@@ -40,5 +40,23 @@ stages {
         }
       }
     }
+  stage('terraform planning') {
+    steps {
+      script{
+          sh """
+                terraform plan
+                """
+        }
+      }
+    }
+  stage('terraform apply') {
+    steps {
+      script{
+          sh """
+                terraform apply --auto-approve
+                """
+        }
+      }
+    }
       }
 }
